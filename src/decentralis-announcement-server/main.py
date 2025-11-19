@@ -4,6 +4,7 @@ import json
 import time
 import uuid
 import sys
+import os
 
 # Global mapping of peer UUID to peer info
 peers = {}
@@ -89,7 +90,8 @@ def tracker_server(host="0.0.0.0", port=5000):
 
 if __name__ == "__main__":
     try:
-        tracker_server()
+        port = int(os.environ.get("PORT", "5000"))
+        tracker_server(port=port)
     except KeyboardInterrupt:
         print("\nServeur arrêté")
         sys.exit(0)

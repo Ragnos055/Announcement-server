@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  announcement:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PORT=${PORT:-5000}
+    ports:
+      - "${PORT:-5000}:${PORT:-5000}"
+    restart: unless-stopped
