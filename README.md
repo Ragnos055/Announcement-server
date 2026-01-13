@@ -17,7 +17,7 @@ Les pairs inactifs sont nettoyés automatiquement toutes les 30 s.
 
 ```bash
 cd src/decentralis-announcement-server
-PORT=5000 python main.py
+python main.py
 ```
 
 Le tracker écoute sur `0.0.0.0:<PORT>`.
